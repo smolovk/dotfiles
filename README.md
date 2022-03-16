@@ -1,1 +1,2 @@
-# dotfilesnord.colorscheme and .profile are for konsole, put into ~/.local/share/konsole
+# dotfiles
+nord.colorscheme and .profile are for konsole, put into ~/.local/share/konsole
