@@ -1,1 +1,2 @@
+print|print json.dumps()|tabnine
 print|print!|rust-client
