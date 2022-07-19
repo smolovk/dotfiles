@@ -11,12 +11,20 @@ set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
 set number                  " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
-filetype plugin indent on   "allow auto-indenting depending on file type
+filetype plugin indent on   " allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
 set mouse=a                 " enable mouse click
 set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
+
+" folds
+set foldmethod=indent
+set foldlevel=1
+
+" sessions
+set ssop-=options    " do not store global and local values in a session
+set ssop-=folds      " do not store folds
 
 " Font
 set guifont=Fira\ Code:h10
@@ -29,10 +37,14 @@ let g:neovide_cursor_vfx_mode = "sonicboom" "enable sonic boom visual effect (fo
 
 "Binds
 :nnoremap <C-b> :NERDTreeToggle<Enter>
+
 :nnoremap <C-z> :u<Enter>
 nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
 :nnoremap <c-F> :cd ~/code/<CR>
 
+
+" aliases
+:command S :source
 
 "binds for barbar (tabs)
 " Move to previous/next
@@ -124,6 +136,8 @@ Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
 Plug 'vim-ctrlspace/vim-ctrlspace'
 Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'romgrk/barbar.nvim'
+Plug 'preservim/nerdcommenter'
+Plug 'mattn/emmet-vim'
 "Plug 'nvim-lua/plenary.nvim'
 "Plug 'folke/trouble.nvim'
 "Plug 'nvim-telescope/telescope.nvim'
