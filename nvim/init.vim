@@ -18,6 +18,8 @@ set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 
+:nnoremap <c-n> :set rnu!<CR>
+
 " folds
 set foldmethod=indent
 set foldlevel=1
