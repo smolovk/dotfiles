@@ -9,7 +9,7 @@ set softtabstop=4           " see multiple spaces as tabstops so <BS> does the r
 set expandtab               " converts tabs to white space
 set shiftwidth=4            " width for autoindents
 set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
+set number relativenumber   " add line numbers
 set wildmode=longest,list   " get bash-like tab completions
 filetype plugin indent on   " allow auto-indenting depending on file type
 syntax on                   " syntax highlighting
@@ -18,7 +18,14 @@ set clipboard=unnamedplus   " using system clipboard
 filetype plugin on
 set ttyfast                 " Speed up scrolling in Vim
 
+" swich relative numbering on c-n
 :nnoremap <c-n> :set rnu!<CR>
+" remove text highlight (searcg)
+:nnoremap <c-k> :noh<CR>
+" comment on c-/
+:nnoremap <c-/> gc
+" save on c-s
+:nnoremap <c-s> :w<CR>
 
 " folds
 set foldmethod=indent
@@ -140,10 +147,17 @@ Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
 Plug 'romgrk/barbar.nvim'
 Plug 'preservim/nerdcommenter'
 Plug 'mattn/emmet-vim'
-"Plug 'nvim-lua/plenary.nvim'
-"Plug 'folke/trouble.nvim'
-"Plug 'nvim-telescope/telescope.nvim'
-"Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-surround'
+Plug 'folke/trouble.nvim'
 call plug#end()
+
+lua << EOF
+  require("trouble").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+  }
+EOF
 
 colorscheme nord
