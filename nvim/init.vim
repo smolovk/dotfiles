@@ -30,6 +30,7 @@ set ttyfast                 " Speed up scrolling in Vim
 " folds
 set foldmethod=indent
 set foldlevel=1
+set nofoldenable
 
 " sessions
 set ssop-=options    " do not store global and local values in a session
@@ -129,35 +130,34 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 " Or use `complete_info` if your vim support it, like:
 " inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
 
-" Plugins
-call plug#begin()
-Plug 'arcticicestudio/nord-vim'
-Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-Plug 'frazrepo/vim-rainbow'
-Plug 'vim-airline/vim-airline'
-Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'jiangmiao/auto-pairs'
-Plug 'folke/lsp-colors.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'preservim/nerdcommenter'
-Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
-Plug 'vim-ctrlspace/vim-ctrlspace'
-Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-Plug 'romgrk/barbar.nvim'
-Plug 'preservim/nerdcommenter'
-Plug 'mattn/emmet-vim'
-Plug 'tpope/vim-commentary'
-Plug 'tpope/vim-surround'
-Plug 'folke/trouble.nvim'
-call plug#end()
+
 
 lua << EOF
-  require("trouble").setup {
-    -- your configuration comes here
-    -- or leave it empty to use the default settings
-    -- refer to the configuration section below
-  }
+    require('plugins')
 EOF
+
+" Plugins
+"call plug#begin()
+"Plug 'arcticicestudio/nord-vim'
+"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+"Plug 'frazrepo/vim-rainbow'
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"Plug 'neoclide/coc.nvim', {'branch': 'release'}
+"Plug 'jiangmiao/auto-pairs'
+"Plug 'folke/lsp-colors.nvim'
+"Plug 'kyazdani42/nvim-web-devicons'
+"Plug 'preservim/nerdcommenter'
+"Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
+"Plug 'vim-ctrlspace/vim-ctrlspace'
+"Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
+"Plug 'romgrk/barbar.nvim'
+"Plug 'preservim/nerdcommenter'
+"Plug 'mattn/emmet-vim'
+"Plug 'tpope/vim-commentary'
+"Plug 'tpope/vim-surround'
+"Plug 'folke/trouble.nvim'
+"call plug#end()
+
 
 colorscheme nord
