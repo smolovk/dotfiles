@@ -49,7 +49,6 @@ let g:neovide_cursor_vfx_mode = "sonicboom" "enable sonic boom visual effect (fo
 :nnoremap <C-b> :NERDTreeToggle<Enter>
 
 :nnoremap <C-z> :u<Enter>
-nnoremap <c-P> <cmd>lua require('fzf-lua').files()<CR>
 :nnoremap <c-F> :cd ~/code/<CR>
 
 
@@ -133,7 +132,7 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 
 lua << EOF
-    require('plugins')
+    require('init')
 EOF
 
 " Plugins

@@ -1,4 +1,5 @@
 return require('packer').startup(function()
+    -- git plugins
     use 'wbthomason/packer.nvim'
     use 'arcticicestudio/nord-vim'
     use 'scrooloose/nerdtree'
@@ -11,15 +12,22 @@ return require('packer').startup(function()
     use 'kyazdani42/nvim-web-devicons'
     use {'akinsho/toggleterm.nvim', tag = 'v1.*'}
     use 'vim-ctrlspace/vim-ctrlspace'
-    use {'ibhagwan/fzf-lua', branch = 'main'}
     use 'romgrk/barbar.nvim'
     use 'mattn/emmet-vim'
     use 'tpope/vim-commentary'
     use 'tpope/vim-surround'
-    use({
-      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-      config = function()
-        require("lsp_lines").register_lsp_virtual_lines()
-      end,
-    })
+    use 'nvim-lua/plenary.nvim'
+    use {
+        'nvim-treesitter/nvim-treesitter',
+        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+    }
+    use 'APZelos/blamer.nvim'
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    -- or                            , branch = '0.1.x',
+      requires = { {'nvim-lua/plenary.nvim'} }
+    }
+
+    -- local plugins
+    use '/home/smolovk/code/lua/projector.nvim'
 end)
