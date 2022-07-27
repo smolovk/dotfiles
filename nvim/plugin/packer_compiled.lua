@@ -84,20 +84,10 @@ _G.packer_plugins = {
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/APZelos/blamer.nvim"
   },
-  ["coc.nvim"] = {
-    loaded = true,
-    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/coc.nvim",
-    url = "https://github.com/neoclide/coc.nvim"
-  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/emmet-vim",
     url = "https://github.com/mattn/emmet-vim"
-  },
-  ["fzf-lua"] = {
-    loaded = true,
-    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/fzf-lua",
-    url = "https://github.com/ibhagwan/fzf-lua"
   },
   ["lsp-colors.nvim"] = {
     loaded = true,
@@ -138,6 +128,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/projector.nvim",
     url = "/home/smolovk/code/lua/projector.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
   },
   ["toggleterm.nvim"] = {
     loaded = true,

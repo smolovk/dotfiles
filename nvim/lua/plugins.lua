@@ -6,7 +6,6 @@ return require('packer').startup(function()
     use 'frazrepo/vim-rainbow'
     use 'vim-airline/vim-airline'
     use 'vim-airline/vim-airline-themes'
-    use {'neoclide/coc.nvim', branch = 'release'}
     use 'jiangmiao/auto-pairs'
     use 'folke/lsp-colors.nvim'
     use 'kyazdani42/nvim-web-devicons'
@@ -27,6 +26,7 @@ return require('packer').startup(function()
     -- or                            , branch = '0.1.x',
       requires = { {'nvim-lua/plenary.nvim'} }
     }
+    -- use 'smolovk/projector.nvim'
 
     -- local plugins
     use '/home/smolovk/code/lua/projector.nvim'
