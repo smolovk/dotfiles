@@ -104,59 +104,9 @@ autocmd TermEnter term://*toggleterm#*
 nnoremap <silent><c-t> <Cmd>exe v:count1 . "ToggleTerm"<CR>
 inoremap <silent><c-t> <Esc><Cmd>exe v:count1 . "ToggleTerm"<CR>
 
-"coc complete on tab
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
-
-function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
-
-" Use <c-space> to trigger completion.
-if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
-else
-  inoremap <silent><expr> <c-@> coc#refresh()
-endif
-
-" Use <cr> to confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-" Or use `complete_info` if your vim support it, like:
-" inoremap <expr> <cr> complete_info()["selected"] != "-1" ? "\<C-y>" : "\<C-g>u\<CR>"
-
-
 
 lua << EOF
     require('init')
 EOF
-
-" Plugins
-"call plug#begin()
-"Plug 'arcticicestudio/nord-vim'
-"Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
-"Plug 'frazrepo/vim-rainbow'
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"Plug 'neoclide/coc.nvim', {'branch': 'release'}
-"Plug 'jiangmiao/auto-pairs'
-"Plug 'folke/lsp-colors.nvim'
-"Plug 'kyazdani42/nvim-web-devicons'
-"Plug 'preservim/nerdcommenter'
-"Plug 'akinsho/toggleterm.nvim', {'tag' : 'v1.*'}
-"Plug 'vim-ctrlspace/vim-ctrlspace'
-"Plug 'ibhagwan/fzf-lua', {'branch': 'main'}
-"Plug 'romgrk/barbar.nvim'
-"Plug 'preservim/nerdcommenter'
-"Plug 'mattn/emmet-vim'
-"Plug 'tpope/vim-commentary'
-"Plug 'tpope/vim-surround'
-"Plug 'folke/trouble.nvim'
-"call plug#end()
-
 
 colorscheme nord

@@ -2,17 +2,19 @@ vim.g.mapleader = " "
 
 require('plugins')
 require('globals')
+require('lsp')
 
 --==Key mappings==--
+local opts = { noremap = true, silent = true }
 --=developing
 --execute current file
-vim.api.nvim_set_keymap("n", "<Leader><Leader>x", ":w<cr>:source %<cr>", { noremap = true, silent = true })
+vim.keymap.set("n", "<Leader><Leader>x", ":w<cr>:source %<cr>", opts)
 --= telescope.nvim
-vim.api.nvim_set_keymap("n", "<c-p>", ":lua require('telescope.builtin').find_files() <CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>ff", ":lua require('telescope.builtin').find_files() <CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>fg", ":lua require('telescope.builtin').live_grep() <CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>fb", ":lua require('telescope.builtin').buffers() <CR>", { noremap = true, silent = true })
-vim.api.nvim_set_keymap("n", "<Leader>fh", ":lua require('telescope.builtin').help_tags() <CR>", { noremap = true, silent = true })
+vim.keymap.set("n", "<c-p>", require('telescope.builtin').find_files, opts)
+vim.keymap.set("n", "<Leader>ff", require('telescope.builtin').find_files, opts)
+vim.keymap.set("n", "<Leader>fg", require('telescope.builtin').live_grep, opts)
+vim.keymap.set("n", "<Leader>fb", require('telescope.builtin').buffers, opts)
+vim.keymap.set("n", "<Leader>fh", require('telescope.builtin').help_tags, opts)
 
 --==Plugins config==--
 

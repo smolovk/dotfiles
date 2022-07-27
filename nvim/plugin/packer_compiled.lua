@@ -69,6 +69,11 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/LuaSnip",
+    url = "https://github.com/L3MON4D3/LuaSnip"
+  },
   ["auto-pairs"] = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/auto-pairs",
@@ -84,6 +89,21 @@ _G.packer_plugins = {
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/APZelos/blamer.nvim"
   },
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/cmp-buffer",
+    url = "https://github.com/hrsh7th/cmp-buffer"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",
+    url = "https://github.com/hrsh7th/cmp-nvim-lsp"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/cmp-path",
+    url = "https://github.com/hrsh7th/cmp-path"
+  },
   ["emmet-vim"] = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/emmet-vim",
@@ -94,6 +114,16 @@ _G.packer_plugins = {
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/lsp-colors.nvim",
     url = "https://github.com/folke/lsp-colors.nvim"
   },
+  ["mason-lspconfig.nvim"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/mason-lspconfig.nvim",
+    url = "https://github.com/williamboman/mason-lspconfig.nvim"
+  },
+  ["mason.nvim"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/mason.nvim",
+    url = "https://github.com/williamboman/mason.nvim"
+  },
   nerdtree = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/nerdtree",
@@ -103,6 +133,16 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/nord-vim",
     url = "https://github.com/arcticicestudio/nord-vim"
+  },
+  ["nvim-cmp"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/nvim-cmp",
+    url = "https://github.com/hrsh7th/nvim-cmp"
+  },
+  ["nvim-lspconfig"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
+    url = "https://github.com/neovim/nvim-lspconfig"
   },
   ["nvim-treesitter"] = {
     loaded = true,
@@ -139,6 +179,11 @@ _G.packer_plugins = {
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/toggleterm.nvim",
     url = "https://github.com/akinsho/toggleterm.nvim"
   },
+  ["tokyonight.nvim"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
+    url = "https://github.com/folke/tokyonight.nvim"
+  },
   ["vim-airline"] = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/vim-airline",
@@ -153,11 +198,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/vim-commentary",
     url = "https://github.com/tpope/vim-commentary"
-  },
-  ["vim-ctrlspace"] = {
-    loaded = true,
-    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/vim-ctrlspace",
-    url = "https://github.com/vim-ctrlspace/vim-ctrlspace"
   },
   ["vim-rainbow"] = {
     loaded = true,
