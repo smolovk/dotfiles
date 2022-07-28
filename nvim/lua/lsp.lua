@@ -22,6 +22,8 @@ end
 
 
 --== Config for servers ==--
+require'lspconfig'.pyright.setup{}
+
 require'lspconfig'.vuels.setup {
     on_attach = on_attach,
     capabilities = capabilities

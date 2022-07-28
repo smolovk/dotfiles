@@ -3,19 +3,31 @@ vim.g.mapleader = " "
 require('plugins')
 require('globals')
 require('lsp')
+require('telescope_conf')
 
 --==Key mappings==--
 local opts = { noremap = true, silent = true }
 --=developing
 --execute current file
 vim.keymap.set("n", "<Leader><Leader>x", ":w<cr>:source %<cr>", opts)
---= telescope.nvim
-vim.keymap.set("n", "<c-p>", require('telescope.builtin').find_files, opts)
-vim.keymap.set("n", "<Leader>ff", require('telescope.builtin').find_files, opts)
-vim.keymap.set("n", "<Leader>fg", require('telescope.builtin').live_grep, opts)
-vim.keymap.set("n", "<Leader>fb", require('telescope.builtin').buffers, opts)
-vim.keymap.set("n", "<Leader>fh", require('telescope.builtin').help_tags, opts)
 
+--==User Commands==--
+
+-- vim.api.nvim_create_user_command(
+--   "PrEdit",
+--   function(conf)
+--     require('projector').edit(conf.args)
+--   end,
+--   { nargs=1 }
+-- )
+
+-- vim.api.nvim_create_user_command(
+--   "PrLoad",
+--   function(conf)
+--     require('projector').load(conf.args)
+--   end,
+--   { nargs=1 }
+-- )
 --==Plugins config==--
 
 --= blamer.nvim
