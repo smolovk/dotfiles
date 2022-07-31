@@ -4,6 +4,12 @@ require('plugins')
 require('globals')
 require('lsp')
 require('telescope_conf')
+require('lualine_conf')
+
+--==Config==--
+vim.opt.list = true
+vim.opt.listchars = "eol:↵,tab:| ,multispace:•••>"
+vim.opt.expandtab = true
 
 --==Key mappings==--
 local opts = { noremap = true, silent = true }
@@ -12,22 +18,7 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<Leader><Leader>x", ":w<cr>:source %<cr>", opts)
 
 --==User Commands==--
-
--- vim.api.nvim_create_user_command(
---   "PrEdit",
---   function(conf)
---     require('projector').edit(conf.args)
---   end,
---   { nargs=1 }
--- )
-
--- vim.api.nvim_create_user_command(
---   "PrLoad",
---   function(conf)
---     require('projector').load(conf.args)
---   end,
---   { nargs=1 }
--- )
+--==AutoCommands==--
 --==Plugins config==--
 
 --= blamer.nvim
@@ -35,3 +26,6 @@ vim.keymap.set("n", "<Leader><Leader>x", ":w<cr>:source %<cr>", opts)
 vim.g.blamer_enabled = 1
 --change delay to 200
 vim.g.blamer_delay = 200
+
+--==Color scheme==--
+vim.cmd("colorscheme tokyonight")

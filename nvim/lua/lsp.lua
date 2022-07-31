@@ -6,7 +6,7 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 -- diagnostic nav
 vim.keymap.set('n', '<leader>dj', vim.diagnostic.goto_next, bufopts)
 vim.keymap.set('n', '<leader>dk', vim.diagnostic.goto_prev, bufopts)
-vim.keymap.set('n', '<leader>dl', require('telescope.builtin').diagnostics, bufopts)
+vim.keymap.set('n', '<leader>ld', require('telescope.builtin').diagnostics, bufopts)
 
 local on_attach = function ()
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, bufopts)
@@ -69,8 +69,8 @@ snippet = {
   end,
 },
 window = {
-  -- completion = cmp.config.window.bordered(),
-  -- documentation = cmp.config.window.bordered(),
+-- completion = cmp.config.window.bordered(),
+-- documentation = cmp.config.window.bordered(),
 },
 mapping = cmp.mapping.preset.insert({
     ['<C-b>'] = cmp.mapping.scroll_docs(-4),

@@ -1,7 +1,0 @@
-{
-    "eslint.run": "onType",
-    "eslint.autoFixOnSave": true,
-    "eslint.format.enable": true,
-    "Lua.telemetry.enable": false,
-    "sumneko-lua.enableNvimLuaDev": true
-}

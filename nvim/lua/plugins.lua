@@ -13,11 +13,18 @@ return require('packer').startup(function(use)
     -- color schemes
     use 'arcticicestudio/nord-vim'
     use 'folke/tokyonight.nvim'
+    use 'rafi/awesome-vim-colorschemes'
+
+	  --lualine
+  	use {
+	    'nvim-lualine/lualine.nvim',
+	    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	  }
 
     use 'scrooloose/nerdtree'
     use 'frazrepo/vim-rainbow'
-    use 'vim-airline/vim-airline'
-    use 'vim-airline/vim-airline-themes'
+    -- use 'vim-airline/vim-airline'
+    -- use 'vim-airline/vim-airline-themes'
     use 'jiangmiao/auto-pairs'
     use 'folke/lsp-colors.nvim'
     use 'kyazdani42/nvim-web-devicons'
@@ -33,12 +40,13 @@ return require('packer').startup(function(use)
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
     use 'APZelos/blamer.nvim'
-    use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
-        requires = { {'nvim-lua/plenary.nvim'} }
-    }
+    -- use {
+    --     'nvim-telescope/telescope.nvim', tag = '0.1.0',
+    --     requires = { {'nvim-lua/plenary.nvim'} }
+    -- }
     -- use 'smolovk/projector.nvim'
 
     -- local plugins
+    use '/home/smolovk/code/lua/telescope.nvim'
     use '/home/smolovk/code/lua/projector.nvim'
 end)
