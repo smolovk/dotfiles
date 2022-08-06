@@ -3,6 +3,8 @@ return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     -- lsp
     use 'neovim/nvim-lspconfig'
+    use 'jose-elias-alvarez/null-ls.nvim'
+    use 'MunifTanjim/eslint.nvim'
     -- completion
     use 'hrsh7th/nvim-cmp'
     use 'hrsh7th/cmp-nvim-lsp'

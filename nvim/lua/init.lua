@@ -5,6 +5,7 @@ require('globals')
 require('lsp')
 require('telescope_conf')
 require('lualine_conf')
+require('luasnip_conf')
 
 --==Config==--
 vim.opt.list = true
@@ -28,4 +29,5 @@ vim.g.blamer_enabled = 1
 vim.g.blamer_delay = 200
 
 --==Color scheme==--
-vim.cmd("colorscheme tokyonight")
+-- vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme gruvbox")
