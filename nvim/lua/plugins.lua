@@ -30,8 +30,9 @@ return require('packer').startup(function(use)
     use 'jiangmiao/auto-pairs'
     use 'folke/lsp-colors.nvim'
     use 'kyazdani42/nvim-web-devicons'
-    use {'akinsho/toggleterm.nvim', tag = 'v1.*'}
-    -- use 'vim-ctrlspace/vim-ctrlspace'
+    use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
+        require("toggleterm").setup()
+    end}
     use 'romgrk/barbar.nvim'
     use 'mattn/emmet-vim'
     use 'tpope/vim-commentary'
@@ -42,13 +43,13 @@ return require('packer').startup(function(use)
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
     use 'APZelos/blamer.nvim'
-    -- use {
-    --     'nvim-telescope/telescope.nvim', tag = '0.1.0',
-    --     requires = { {'nvim-lua/plenary.nvim'} }
-    -- }
-    -- use 'smolovk/projector.nvim'
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use 'smolovk/projector.nvim'
 
     -- local plugins
-    use '/home/smolovk/code/lua/telescope.nvim'
-    use '/home/smolovk/code/lua/projector.nvim'
+    -- use '/home/smolovk/code/lua/telescope.nvim'
+    -- use '/home/smolovk/code/lua/projector.nvim'
 end)
