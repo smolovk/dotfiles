@@ -3,7 +3,7 @@ local opts = { noremap = true, silent = true }
 
 local find_config = function()
     require('telescope.builtin').find_files {
-        cwd = "~/.config/nvim"
+        cwd = "~/dotfiles/nvim/.config/nvim"
     }
 end
 
