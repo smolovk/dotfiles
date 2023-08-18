@@ -13,7 +13,7 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'L3MON4D3/LuaSnip'
-    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+    -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
     -- color schemes
     use 'arcticicestudio/nord-vim'
@@ -48,7 +48,7 @@ return require('packer').startup(function(use)
     }
     use 'APZelos/blamer.nvim'
     use {
-        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        'nvim-telescope/telescope.nvim',
         requires = { {'nvim-lua/plenary.nvim'} }
     }
     use 'smolovk/projector.nvim'
