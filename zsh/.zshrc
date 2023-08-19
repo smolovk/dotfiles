@@ -102,3 +102,6 @@ source $ZSH/oh-my-zsh.sh
 alias jsinit="npm-init-analog"
 alias cat='bat -pp --theme=Nord'
 alias la='ls -a'
+
+alias codecd="cd ~/www/code"
+alias agrocd="cd ~/www/code/agro"
