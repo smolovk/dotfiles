@@ -3,7 +3,7 @@ vim.g.mapleader = " "
 require('plugins')
 require('globals')
 require('lsp')
-require('tab9')
+-- require('tab9')
 require('telescope_conf')
 require('lualine_conf')
 require('luasnip_conf')
@@ -47,5 +47,5 @@ vim.g.blamer_delay = 200
 
 --==Color scheme==--
 -- vim.cmd("colorscheme leaf")
-vim.cmd("colorscheme gruvbox")
--- vim.cmd("colorscheme tokyonight")
+-- vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme tokyonight")
