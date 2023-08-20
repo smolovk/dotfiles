@@ -53,6 +53,9 @@ return require('packer').startup(function(use)
     }
     use 'smolovk/projector.nvim'
 
+    -- tmux
+    use 'christoomey/vim-tmux-navigator'
+
     -- local plugins
     -- use '/home/smolovk/code/lua/telescope.nvim'
     -- use '/home/smolovk/code/lua/projector.nvim'

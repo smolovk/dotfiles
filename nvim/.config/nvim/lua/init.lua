@@ -47,5 +47,5 @@ vim.g.blamer_delay = 200
 
 --==Color scheme==--
 -- vim.cmd("colorscheme leaf")
--- vim.cmd("colorscheme gruvbox")
-vim.cmd("colorscheme tokyonight")
+vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme tokyonight")
