@@ -1,7 +1,9 @@
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 
 local bufopts = { noremap=true, silent=true, buffer=0 }
-local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+-- vim.lsp.protocol.make_client_capabilities()
+
 
 -- diagnostic nav
 vim.keymap.set('n', '<leader>dj', vim.diagnostic.goto_next, bufopts)
@@ -23,6 +25,22 @@ end
 
 --== Config for servers ==--
 require'lspconfig'.pyright.setup{}
+
+require'lspconfig'.gopls.setup {
+    capabilities = capabilities,
+    cmd = {"gopls", "serve"},
+    filetypes = {"go", "gomod"},
+    root_dir = require"lspconfig/util".root_pattern("go.work", "go.mod", ".git"),
+    settings = {
+      gopls = {
+        analyses = {
+          unusedparams = true,
+        },
+        staticcheck = true,
+      },
+    },
+  }
+
 
 require'lspconfig'.eslint.setup{}
 
@@ -85,6 +103,7 @@ vim.opt.completeopt = {"menu", "menuone", "noselect"}
 -- Setup nvim-cmp.
 local cmp = require'cmp'
 
+
 cmp.setup({
 snippet = {
   expand = function(args)
@@ -103,10 +122,9 @@ mapping = cmp.mapping.preset.insert({
     ['<CR>'] = cmp.mapping.confirm({ select = true }), -- Accept currently selected item. Set `select` to `false` to only confirm explicitly selected items.
 }),
 sources = cmp.config.sources({
-    { name = 'cmp_tabnine' },
+    -- { name = 'cmp_tabnine' },
     { name = 'nvim_lsp' },
     { name = 'luasnip' }, -- For luasnip users.
-}, {
     { name = 'buffer' },
 })
 })

@@ -13,6 +13,8 @@ return require('packer').startup(function(use)
     use 'hrsh7th/cmp-buffer'
     use 'hrsh7th/cmp-path'
     use 'L3MON4D3/LuaSnip'
+    use 'rafamadriz/friendly-snippets'
+    use 'saadparwaiz1/cmp_luasnip'
     -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
     -- color schemes
@@ -54,7 +56,7 @@ return require('packer').startup(function(use)
     use 'smolovk/projector.nvim'
 
     -- tmux
-    use 'christoomey/vim-tmux-navigator'
+    -- use 'christoomey/vim-tmux-navigator'
 
     -- local plugins
     -- use '/home/smolovk/code/lua/telescope.nvim'
