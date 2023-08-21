@@ -5,6 +5,12 @@ return require('packer').startup(function(use)
     use 'neovim/nvim-lspconfig'
     use 'jose-elias-alvarez/null-ls.nvim'
     use 'MunifTanjim/eslint.nvim'
+    use 'mfussenegger/nvim-dap'
+    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use {
+        "williamboman/mason.nvim",
+        "williamboman/mason-lspconfig.nvim"
+    }
     -- pico8
     use 'bakudankun/pico-8.vim'
     -- completion
