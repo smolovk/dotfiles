@@ -38,7 +38,7 @@ set ssop-=options    " do not store global and local values in a session
 set ssop-=folds      " do not store folds
 
 " Font
-set guifont=Fira\ Code:h10
+" set guifont=Fira\ Code:h10
 
 "Fullscreen
 let g:neovide_remember_window_size = v:true

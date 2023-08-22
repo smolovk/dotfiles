@@ -30,9 +30,10 @@ return require('packer').startup(function(use)
     use "morhetz/gruvbox"
 
 	  --lualine
+    use 'kyazdani42/nvim-web-devicons'
   	use {
 	    'nvim-lualine/lualine.nvim',
-	    requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+	    requires = { 'kyazdani42/nvim-web-devicons' }
 	  }
 
     use 'scrooloose/nerdtree'
@@ -41,7 +42,6 @@ return require('packer').startup(function(use)
     -- use 'vim-airline/vim-airline-themes'
     use 'jiangmiao/auto-pairs'
     use 'folke/lsp-colors.nvim'
-    use 'kyazdani42/nvim-web-devicons'
     use {"akinsho/toggleterm.nvim", tag = 'v2.*', config = function()
         require("toggleterm").setup()
     end}
