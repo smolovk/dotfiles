@@ -24,6 +24,7 @@ return require('packer').startup(function(use)
     -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
     -- color schemes
+    use { "catppuccin/nvim", as ="catppuccin" }
     use 'arcticicestudio/nord-vim'
     use 'folke/tokyonight.nvim'
     use "daschw/leaf.nvim"
@@ -54,6 +55,7 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
+	use 'storyn26383/vim-vue'
     use 'APZelos/blamer.nvim'
     use {
         'nvim-telescope/telescope.nvim',

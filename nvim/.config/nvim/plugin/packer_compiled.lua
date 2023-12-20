@@ -94,6 +94,11 @@ _G.packer_plugins = {
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/blamer.nvim",
     url = "https://github.com/APZelos/blamer.nvim"
   },
+  catppuccin = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/catppuccin",
+    url = "https://github.com/catppuccin/nvim"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -254,6 +259,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/vim-surround",
     url = "https://github.com/tpope/vim-surround"
+  },
+  ["vim-vue"] = {
+    loaded = true,
+    path = "/home/smolovk/.local/share/nvim/site/pack/packer/start/vim-vue",
+    url = "https://github.com/storyn26383/vim-vue"
   }
 }
 

@@ -10,7 +10,8 @@ require('luasnip_conf')
 
 --==Config==--
 vim.opt.list = true
-vim.opt.listchars = "eol:↵,tab:| ,multispace:•••>"
+vim.opt.listchars = "tab:| ,multispace:•   "
+-- vim.opt.listchars = "eol:↵,tab:| ,multispace:   •"
 vim.opt.expandtab = true
 
 require 'nvim-treesitter.configs'.setup {
@@ -26,6 +27,19 @@ require 'nvim-treesitter.configs'.setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
+}
+
+vim.g.clipboard = {
+    name = "win32yank-wsl",
+    copy = {
+        ["+"] = "win32yank.exe -i --crlf",
+        ["*"] = "win32yank.exe -i --crlf",
+    },
+    paste = {
+        ["+"] = "win32yank.exe -o --lf",
+        ["*"] = "win32yank.exe -o --lf",
+    },
+    cache_enabled = true,
 }
 
 
@@ -47,5 +61,6 @@ vim.g.blamer_delay = 200
 
 --==Color scheme==--
 -- vim.cmd("colorscheme leaf")
-vim.cmd("colorscheme gruvbox")
+-- vim.cmd("colorscheme gruvbox")
+vim.cmd("colorscheme catppuccin")
 -- vim.cmd("colorscheme tokyonight")
