@@ -105,3 +105,6 @@ alias la='ls -a'
 
 alias codecd="cd ~/www/code"
 alias agrocd="cd ~/www/code/agro"
+alias get_esp=". /home/smolovk/esp/esp-idf/export.sh"
+alias s_zshrc=". ~/.zshrc"
+echo "hello, \033[1;32m${USER}\033[00m!\n  \e[3m- use \033[34mget_esp\033[00m to set esp-idf variables\e[0m"

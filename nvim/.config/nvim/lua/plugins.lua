@@ -2,25 +2,41 @@ return require('packer').startup(function(use)
     --==git plugins
     use 'wbthomason/packer.nvim'
     -- lsp
-    use 'neovim/nvim-lspconfig'
-    use 'jose-elias-alvarez/null-ls.nvim'
-    use 'MunifTanjim/eslint.nvim'
-    use 'mfussenegger/nvim-dap'
-    use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use {
-        "williamboman/mason.nvim",
-        "williamboman/mason-lspconfig.nvim"
+      'VonHeikemen/lsp-zero.nvim',
+      branch = 'v3.x',
+      requires = {
+        --- Uncomment the two plugins below if you want to manage the language servers from neovim
+        {'williamboman/mason.nvim'},
+        {'williamboman/mason-lspconfig.nvim'},
+
+        -- LSP Support
+        {'neovim/nvim-lspconfig'},
+        -- Autocompletion
+        {'hrsh7th/nvim-cmp'},
+        {'hrsh7th/cmp-nvim-lsp'},
+        {'L3MON4D3/LuaSnip'},
+      }
     }
-    -- pico8
-    use 'bakudankun/pico-8.vim'
-    -- completion
-    use 'hrsh7th/nvim-cmp'
-    use 'hrsh7th/cmp-nvim-lsp'
-    use 'hrsh7th/cmp-buffer'
-    use 'hrsh7th/cmp-path'
-    use 'L3MON4D3/LuaSnip'
-    use 'rafamadriz/friendly-snippets'
-    use 'saadparwaiz1/cmp_luasnip'
+    -- use 'neovim/nvim-lspconfig'
+    -- use 'jose-elias-alvarez/null-ls.nvim'
+    -- use 'MunifTanjim/eslint.nvim'
+    -- use 'mfussenegger/nvim-dap'
+    -- use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    -- -- use {
+    -- --     "williamboman/mason.nvim",
+    -- --     "williamboman/mason-lspconfig.nvim"
+    -- -- }
+    -- -- pico8
+    -- use 'bakudankun/pico-8.vim'
+    -- -- completion
+    -- -- use 'hrsh7th/nvim-cmp'
+    -- -- use 'hrsh7th/cmp-nvim-lsp'
+    -- -- use 'hrsh7th/cmp-buffer'
+    -- -- use 'hrsh7th/cmp-path'
+    -- use 'L3MON4D3/LuaSnip'
+    -- use 'rafamadriz/friendly-snippets'
+    -- use 'saadparwaiz1/cmp_luasnip'
     -- use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
     -- color schemes

@@ -2,7 +2,8 @@ vim.g.mapleader = " "
 
 require('plugins')
 require('globals')
-require('lsp')
+require('lspzero')
+-- require('lsp')
 -- require('tab9')
 require('telescope_conf')
 require('lualine_conf')
