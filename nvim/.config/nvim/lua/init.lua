@@ -1,48 +1,50 @@
 vim.g.mapleader = " "
 
-require('plugins')
 require('globals')
-require('lspzero')
--- require('lsp')
--- require('tab9')
+require('newlsp')
+require('config.lazy')
 require('telescope_conf')
 require('lualine_conf')
-require('luasnip_conf')
 
 --==Config==--
+vim.o.tabstop = 4
+vim.o.expandtab = false -- true = spaces, false = tabs
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.wo.number = true
+
 vim.opt.list = true
 vim.opt.listchars = "tab:| ,multispace:•   "
 -- vim.opt.listchars = "eol:↵,tab:| ,multispace:   •"
-vim.opt.expandtab = true
 
 require 'nvim-treesitter.configs'.setup {
-    highlight = {
-        enable = true,
-        custom_captures = {
-            -- Highlight the @foo.bar capture group with the "Identifier" highlight group.
-            ["foo.bar"] = "Identifier",
-        },
-        -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
-        -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
-        -- Using this option may slow down your editor, and you may see some duplicate highlights.
-        -- Instead of true it can also be a list of languages
-        additional_vim_regex_highlighting = false,
-    },
+	highlight = {
+		enable = true,
+		custom_captures = {
+			-- Highlight the @foo.bar capture group with the "Identifier" highlight group.
+			["foo.bar"] = "Identifier",
+		},
+		-- Setting this to true will run `:h syntax` and tree-sitter at the same time.
+		-- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
+		-- Using this option may slow down your editor, and you may see some duplicate highlights.
+		-- Instead of true it can also be a list of languages
+		additional_vim_regex_highlighting = false,
+	},
 }
 
 if package.config:sub(1,1) == "\\" then
-    vim.g.clipboard = {
-        name = "win32yank-wsl",
-        copy = {
-            ["+"] = "win32yank.exe -i --crlf",
-            ["*"] = "win32yank.exe -i --crlf",
-        },
-        paste = {
-            ["+"] = "win32yank.exe -o --lf",
-            ["*"] = "win32yank.exe -o --lf",
-        },
-        cache_enabled = true,
-    }
+	vim.g.clipboard = {
+		name = "win32yank-wsl",
+		copy = {
+			["+"] = "win32yank.exe -i --crlf",
+			["*"] = "win32yank.exe -i --crlf",
+		},
+		paste = {
+			["+"] = "win32yank.exe -o --lf",
+			["*"] = "win32yank.exe -o --lf",
+		},
+		cache_enabled = true,
+	}
 end
 
 --==Key mappings==--
