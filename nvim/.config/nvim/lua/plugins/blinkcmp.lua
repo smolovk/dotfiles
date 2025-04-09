@@ -1,25 +1,26 @@
 return {
-  'saghen/blink.cmp',
-  -- optional: provides snippets for the snippet source
-  dependencies = {'rafamadriz/friendly-snippets'},
+	'saghen/blink.cmp',
+	-- optional: provides snippets for the snippet source
+	dependencies = {'rafamadriz/friendly-snippets'},
 
-  build = 'cargo +nightly build --release',
+	build = 'cargo +nightly build --release',
 
-  opts = {
-    keymap = { preset = 'super-tab' },
+	opts = {
+		keymap = { preset = 'super-tab' },
 
-    appearance = {
-      nerd_font_variant = 'mono'
-    },
+		appearance = {
+			nerd_font_variant = 'mono'
+		},
 
-    sources = {
-      default = { 'lsp', 'path', 'snippets', 'buffer' },
-    },
+		sources = {
+			default = { 'lsp', 'path', 'snippets', 'buffer' },
+		},
 
 	cmdline = {enabled = false},
-    fuzzy = {
+		fuzzy = {
 		implementation = "rust",
 	}
-  },
-  opts_extend = { "sources.default" }
+	},
+	opts_extend = { "sources.default" },
+	enabled=false
 }

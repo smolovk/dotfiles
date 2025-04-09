@@ -6,9 +6,8 @@ return {
 	{ "catppuccin/nvim", as ="catppuccin" },
 	'arcticicestudio/nord-vim',
 	'folke/tokyonight.nvim',
-	"daschw/leaf.nvim",
-	"morhetz/gruvbox",
-	'comfysage/evergarden',
+	'rebelot/kanagawa.nvim',
+	'loctvl842/monokai-pro.nvim',
 
 	--lualine
 	'nvim-tree/nvim-web-devicons',
@@ -16,12 +15,17 @@ return {
 		'nvim-lualine/lualine.nvim',
 		requires = { 'nvim-tree/nvim-web-devicons' }
 	},
+	{
+		'windwp/nvim-autopairs',
+		event = "InsertEnter",
+		config = true
+	},
 
 	'scrooloose/nerdtree',
 	'frazrepo/vim-rainbow',
 	-- 'vim-airline/vim-airline'
 	-- 'vim-airline/vim-airline-themes'
-	'jiangmiao/auto-pairs',
+	-- 'jiangmiao/auto-pairs',
 	'folke/lsp-colors.nvim',
 	{'akinsho/toggleterm.nvim', version = "*", config = true},
 	'romgrk/barbar.nvim',
