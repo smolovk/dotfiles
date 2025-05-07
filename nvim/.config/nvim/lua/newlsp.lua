@@ -74,4 +74,7 @@ lsp.ts_ls.setup({
 	capabilities = caps,
 })
 
-lsp.vuels.setup({})
+
+lsp.vuels.setup({
+	capabilities = caps
+})
