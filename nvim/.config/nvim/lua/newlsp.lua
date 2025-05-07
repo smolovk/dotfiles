@@ -34,6 +34,9 @@ vim.diagnostic.config{
 lsp.pyright.setup{
 	capabilities = caps
 }
+lsp.gopls.setup{
+	capabilities = caps
+}
 
 lsp.eslint.setup{}
 
@@ -54,19 +57,21 @@ lsp.clangd.setup({
 })
 
 lsp.ts_ls.setup({
-	init_options = {
-		plugins = {
-			{
-				name = "@vue/typescript-plugin",
-				location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
-				languages = {"javascript", "typescript", "vue"},
-			},
-		},
-	},
+	-- init_options = {
+	-- 	plugins = {
+	-- 		{
+	-- 			name = "@vue/typescript-plugin",
+	-- 			location = "/usr/local/lib/node_modules/@vue/typescript-plugin",
+	-- 			languages = {"javascript", "typescript", "vue"},
+	-- 		},
+	-- 	},
+	-- },
 	filetypes = {
 		"javascript",
 		"typescript",
-		"vue",
+		-- "vue",
 	},
 	capabilities = caps,
 })
+
+lsp.vuels.setup({})
