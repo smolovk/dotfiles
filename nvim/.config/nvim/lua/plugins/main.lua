@@ -8,6 +8,7 @@ return {
 	'folke/tokyonight.nvim',
 	'rebelot/kanagawa.nvim',
 	'loctvl842/monokai-pro.nvim',
+	'sainnhe/everforest',
 
 	--lualine
 	'nvim-tree/nvim-web-devicons',
