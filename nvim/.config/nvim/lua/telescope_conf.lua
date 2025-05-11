@@ -20,7 +20,6 @@ local find_files = function()
 end
 
 
-vim.keymap.set("n", "<c-p>", require('telescope.builtin').find_files, opts)
 vim.keymap.set("n", "<Leader>ff", find_files, opts)
 -- find in dotfiles
 vim.keymap.set("n", "<Leader>fc", find_config, opts)
