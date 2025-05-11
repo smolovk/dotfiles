@@ -1,0 +1,7 @@
+show=drun
+prompt=run:
+width=400
+lines=10
+insensitive=true
+term=kitty
+
