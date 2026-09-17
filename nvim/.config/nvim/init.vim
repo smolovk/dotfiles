@@ -1,26 +1,14 @@
-set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching 
-set ignorecase              " case insensitive 
-set mouse=v                 " middle-click paste with 
-set hlsearch                " highlight search 
-set incsearch               " incremental search
-set autoindent
+set showmatch               " show matching brackets
+set ignorecase              " case insensitive (smartcase lives in lua/init.lua)
 set wildmode=longest,list   " get bash-like tab completions
-filetype plugin indent on   " allow auto-indenting depending on file type
-syntax on                   " syntax highlighting
-set mouse=a                 " enable mouse click
+set mouse=a                 " mouse in every mode (nvim default is nvi)
 set clipboard=unnamedplus   " using system clipboard
-filetype plugin on
-set ttyfast                 " Speed up scrolling in Vim
 
-filetype indent on
 
 " swich relative numbering on c-n
 :nnoremap <c-n> :set rnu!<CR>
 " remove text highlight (searcg)
 :nnoremap <c-k> :noh<CR>
-" comment on c-/
-:nnoremap <c-/> gc
 " save on c-s
 :nnoremap <c-s> :w<CR>
 
@@ -43,7 +31,7 @@ let g:neovide_maximized = v:true
 let g:neovide_cursor_vfx_mode = "sonicboom" "enable sonic boom visual effect (for neovide)
 
 "Binds
-:nnoremap <C-b> :NERDTreeToggle<Enter>
+:nnoremap <C-b> :NvimTreeToggle<Enter>
 
 :nnoremap <C-z> :u<Enter>
 :nnoremap <c-F> :cd ~/code/<CR>

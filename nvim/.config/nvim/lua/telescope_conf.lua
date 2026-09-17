@@ -1,9 +1,11 @@
 --== config for telescope.nvim ==--
+require('telescope').load_extension('fzf')
+
 local opts = { noremap = true, silent = true }
 
 local find_config = function()
     require('telescope.builtin').find_files {
-        cwd = "~/dotfiles/nvim/.config/nvim"
+        cwd = "~/.config/nvim"
     }
 end
 
