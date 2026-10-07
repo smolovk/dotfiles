@@ -1,7 +1,9 @@
 --== config for telescope.nvim ==--
 require('telescope').load_extension('fzf')
 
-local opts = { noremap = true, silent = true }
+local function map(lhs, rhs, desc)
+	vim.keymap.set("n", lhs, rhs, { noremap = true, silent = true, desc = desc })
+end
 
 local find_config = function()
     require('telescope.builtin').find_files {
@@ -22,13 +24,12 @@ local find_files = function()
 end
 
 
-vim.keymap.set("n", "<Leader>ff", find_files, opts)
--- find in dotfiles
-vim.keymap.set("n", "<Leader>fc", find_config, opts)
-vim.keymap.set("n", "<Leader>fn", find_notes, opts)
-vim.keymap.set("n", "<Leader>fg", require('telescope.builtin').live_grep, opts)
-vim.keymap.set("n", "<Leader>fs", require('telescope.builtin').colorscheme, opts)
-vim.keymap.set("n", "<Leader>fb", require('telescope.builtin').buffers, opts)
-vim.keymap.set("n", "<Leader>fh", require('telescope.builtin').help_tags, opts)
+map("<Leader>ff", find_files, "Find files (incl. ignored)")
+map("<Leader>fc", find_config, "Find in nvim config")
+map("<Leader>fn", find_notes, "Find in ~/notes")
+map("<Leader>fg", require('telescope.builtin').live_grep, "Live grep")
+map("<Leader>fs", require('telescope.builtin').colorscheme, "Colorscheme")
+map("<Leader>fb", require('telescope.builtin').buffers, "Buffers")
+map("<Leader>fh", require('telescope.builtin').help_tags, "Help tags")
 
 
